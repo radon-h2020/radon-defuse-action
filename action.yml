@@ -1,0 +1,20 @@
+# action.yml
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  model:
+    description: 'model id'
+    required: true
+  language:
+    description: 'The language for the prediction'
+    required: true
+  url:
+    description: 'The API URL'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.model }}
+    - ${{ inputs.language }}
+    - ${{ inputs.url }}
