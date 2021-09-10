@@ -1,15 +1,15 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'RADON DEFUSE GitHub Action for ci/cd'
+description: 'Perform Software Defect Prediction on committed files'
 inputs:
   model:
-    description: 'model id'
+    description: 'model id. Can be found in the DEFUSE Model Manager dashboard'
     required: true
   language:
-    description: 'The language for the prediction'
+    description: 'The language for the prediction. Choices: ansible|tosca'
     required: true
   url:
-    description: 'The API URL'
+    description: 'The URL to DEFUSE backend'
     required: true
 runs:
   using: 'docker'
