@@ -26,11 +26,11 @@ on: [push]
 jobs:
   defect_prediction_job:
     runs-on: ubuntu-latest
-    name: Run DEFUSE's conditional model for Ansible
+    name: Run DEFUSE's model CONDITIONAL for Ansible
     steps:
       - name: Defect Prediction
         id: defect_prediction
-        uses: radon-h2020/radon-defuse-action@v1
+        uses: radon-h2020/radon-defuse-action@v1.1
         with:
           model: 'NEWEKjxoBvRdTopqjjKW'
           language: 'ansible'
